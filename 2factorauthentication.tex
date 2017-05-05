@@ -131,16 +131,15 @@
       \item<2-> Usuario Ej: fulano@gmail.com La parte que todo el mundo conoce
       \item<3-> Contrase\~na  esta parte se supone que solo uno sabe
     \end{itemize}
-    \pause
-    \pause
-    \pause
-    \color[rgb]{1,0,0} Qu\'e pasar\'ia si la contrase\~na fuera robada?
+    \onslide<4->{En realidad nunca metemos esto datos si utilizamos propia pc, tableta, o etc.\\}
+    \onslide<5->{Esto solo pasa cuando usamos pc de ajenos\\}
+    \uncover<6->{\color[rgb]{1,0,0} Qu\'e pasar\'ia si la contrase\~na fuera robada?\\}
   \end{block}
 \end{frame}
 \begin{frame}{El peligro}
   \begin{figure}[ht]
     \begin{center}
-      \includegraphics[width=4in]{noticia-dropbox.png}
+      \includegraphics[width=4in]{images/noticia-dropbox.png}
 	~\footnote{Qu\'e les parece tipo de noticias?}
     \end{center}
   \end{figure}
@@ -148,25 +147,40 @@
 \begin{frame}{base de datos de Dropbox filtrado}
   \begin{figure}[ht]
     \begin{center}
-      \includegraphics[height=2.75in, width=3in]{dropbox-database.png}
+      \includegraphics[height=2.75in, width=3in]{images/dropbox-database.png}
 	~\footnote{Si aqu\'i incluye su cuenta, que har\'ia?}
     \end{center}
   \end{figure}
 \end{frame}
+\section{Los servicios que soportan 2WA}
+\begin{frame}
+  \begin{exampleblock}{Los sitios que soportan 2WA}
+    \begin{itemize}
+      \item Google
+      \item Facebook
+      \item Dropbox
+      \item Hotmail
+      \item Github
+      \item Slack
+      \item Snapchat
+      \item Etc.
+    \end{itemize}
+  \end{exampleblock}
+\end{frame}
 \section{Verificaci\'on de 2 pasos}
 \begin{frame}{Logueo va a ser diferente}
   \begin{figure}
-    \includegraphics[width=4in]{how-works-img-1.png}
+    \includegraphics[width=4in]{images/how-works-img-1.png}
   \end{figure}
 \end{frame}
 \begin{frame}{Agrega una capa m\'as de seguridad}
   \begin{figure}
-    \includegraphics[width=4in]{unacapamas.png}
+    \includegraphics[width=4in]{images/unacapamas.png}
   \end{figure}
 \end{frame}
 \begin{frame}{Algo que sabes y algo que ten\'es}
   \begin{figure}
-    \includegraphics[width=4in]{algoqsabesyalgoqtenes.png}
+    \includegraphics[width=4in]{images/algoqsabesyalgoqtenes.png}
   \end{figure}
 \end{frame}
 \begin{frame}{clave para un solo uso}
@@ -185,51 +199,77 @@
 \end{frame}
 \begin{frame}{1er paso}
   \begin{figure}
-    \includegraphics[width=3.25in]{1paso.png}
+    \includegraphics[width=3.25in]{images/1paso.png}
   \end{figure}
 \end{frame}
 \begin{frame}{2do paso}
   \begin{figure}
-    \includegraphics[width=3.25in]{2paso.png}
+    \includegraphics[width=3.25in]{images/2paso.png}
   \end{figure}
 \end{frame}
 \begin{frame}{3er paso}
   \begin{figure}
-    \includegraphics[width=3.25in]{3paso.png}
+    \includegraphics[width=3.25in]{images/3paso.png}
   \end{figure}
 \end{frame}
 \section{Desventaja}
 \begin{frame}{Problema}
-  \begin{block}{Qu\'e pasar\'ia si no estoy en condicion de recibir clave via mensaje?}
-    Por ej. Estoy en otro pa\'is. \\
-    \color[rgb]{1,0,0} La \'unica soluci\'on ser\'ia roaming?
-  \end{block}
+  \begin{alertblock}{Qu\'e pasar\'ia si no estoy en condicion de recibir clave via mensaje?}
+    \onslide<2->{Por ej. Estoy en otro pa\'is. \\}
+    \uncover<3->{\color[rgb]{1,0,0} La \'unica soluci\'on ser\'ia roaming?\\}
+  \end{alertblock}
 \end{frame}
 \section{Google Authenticator}
 \begin{frame}{Google Authenticator}
   \begin{figure}
-    \includegraphics[width=4in]{google-authenticator.jpg}
+    \includegraphics[width=4in]{images/google-authenticator.jpg}
   \end{figure}
 \end{frame}
 \begin{frame}{Generar OTP en mi smartphone}
   \begin{block}{Via Google Authenticator}
     Google Authenticator genera contrase\~na un solo uso cada 30 segundos\\
-    O sea, no necesita m\'as recibir OTP via mensaje
+    O sea, no necesita m\'as recibir OTP via mensaje\\
+    \color[rgb]{0,0.5,1} Existen otros apps similares a G.A.\\
   \end{block}
 \end{frame}
 \begin{frame}{D\'onde configurar para usar G.A?}
   \begin{block}{URL}
-    https://myaccount.google.com/signinoptions/two-step-verification
+    https://myaccount.google.com/signinoptions/two-step-verification\\
+    \color[rgb]{1,0,0} Para configurarlo, se necesita una pc o notebook y un smartphone\\
+    \color[rgb]{0,0.5,1} Para android, se necesita ademas un app para escanear c\'odigo QR\\
   \end{block}
 \end{frame}
 \begin{frame}{fijese d\'onde}
   \begin{figure}
-    \includegraphics[width=4in]{2wayauth.png}
+    \includegraphics[width=4in]{images/2wayauth.png}
   \end{figure}
 \end{frame}
 \begin{frame}{As\'i habilita el uso de G.A.}
   \begin{figure}{Hay que escanear el c\'odigo QR usando G.A.}
-    \includegraphics[width=2in]{enable-authenticator.png}
+    \includegraphics[width=2in]{images/enable-authenticator.png}
+	~\footnote{Esta pantalla es de pc o notebook}
+  \end{figure}
+\end{frame}
+\begin{frame}{Pantalla real de GA}
+  \begin{figure}
+    \includegraphics[width=1.5in]{images/pantalla-ga.png}
+  \end{figure}
+\end{frame}
+\begin{frame}{Despu\'es de pular signo +}
+  \begin{figure}
+    \includegraphics[width=1.5in]{images/despuesmas.png}
+  \end{figure}
+\end{frame}
+\begin{frame}{Escanear c\'odigo de barra}
+  \begin{figure}
+    \includegraphics[width=1.5in]{images/escanear.png}
+      ~\footnote{C\'odigo QR debe quedar dentro del cuadro}
+  \end{figure}
+\end{frame}
+\begin{frame}{Introducci\'on manual}
+  \begin{figure}
+    \includegraphics[width=1.5in]{images/manual.png}
+      ~\footnote{Necesita 2 campos: la cuenta y clave}
   \end{figure}
 \end{frame}
 \section{C\'odigos de copia de seguridad}
@@ -255,20 +295,26 @@
     \end{itemize}
   \end{block}
 \end{frame}
-\section{Los servicios que soportan 2WA}
-\begin{frame}
-  \begin{block}{Los sitios que soportan 2WA}
-    \begin{itemize}
-      \item Google
-      \item Facebook
-      \item Dropbox
-      \item Hotmail
-      \item Github
-      \item Slack
-      \item Snapchat
-      \item Etc.
-    \end{itemize}
-  \end{block}
+\section{Facebook}
+\begin{frame}{D\'onde configurar 2WA en Facebook}
+  \begin{figure}
+    \includegraphics[width=4in]{images/donde-facebook.png}
+  \end{figure}
+\end{frame}
+\begin{frame}{Men\'u despu\'es de click al triangulo invertido}
+  \begin{figure}
+    \includegraphics[width=2in]{images/facebook-menu.png}
+  \end{figure}
+\end{frame}
+\begin{frame}{Elegir Seguridad e inicio de sesi\'on}
+  \begin{figure}
+    \includegraphics[width=3in]{images/seguridad-iniciodesesion.png}
+  \end{figure}
+\end{frame}
+\begin{frame}{Elegir usar autenticaci\'on de 2 pasos}
+  \begin{figure}
+    \includegraphics[width=3.5in]{images/adentro-seguridad.png}
+  \end{figure}
 \end{frame}
 \begin{frame}
   \begin{block}{Si quieren bajar esta prensentaci\'on}
@@ -277,17 +323,17 @@
 \end{frame}
 \begin{frame}{https://logosklogos.com}
   \begin{figure}{Biblia interlineal}
-    \includegraphics[width=3.25in]{logos-home.png}
+    \includegraphics[width=3.25in]{images/logos-home.png}
   \end{figure}
 \end{frame}
 \begin{frame}{https://logosklogos.com}
   \begin{figure}{Nuevo testamento}
-    \includegraphics[width=3.25in]{logos-griego.png}
+    \includegraphics[width=3.25in]{images/logos-griego.png}
   \end{figure}
 \end{frame}
 \begin{frame}{https://logosklogos.com}
   \begin{figure}{Antiguo testamento}
-    \includegraphics[width=3.25in]{logos-hebreo.png}
+    \includegraphics[width=3.25in]{images/logos-hebreo.png}
   \end{figure}
 \end{frame}
 \end{document}
